@@ -3,8 +3,10 @@ body {
   background-color: #f2f2f2;
   text-align: center;
   padding-top: 50px;
+  background-image: url('fleurs.jfif');
+  background-size: cover;
+  background-image: url(Diploma\ of\ Information\ Technology.jpeg);
 }
-
 .container {
   background-color: white;
   width: 400px;
@@ -12,26 +14,44 @@ body {
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background: transparent;
+  backdrop-filter: blur(20px);
 }
 
 .role-selection {
+  display: flex;
+  justify-content: center;
   margin-bottom: 20px;
+  gap: 20px;
 }
 
-.role-selection label {
-  margin: 0 10px;
-  font-size: 18px;
+.role-btn {
+  padding: 10px 30px;
+  border: 2px solid navy;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: white;
+  color: navy;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
 }
-
+input[type="radio"]:checked + .role-btn {
+  background-color:navy;
+  color: white;
+}
 button {
   padding: 10px 20px;
   font-size: 16px;
   margin-top: 10px;
   cursor: pointer;
+  background-color: white;
+
 }
 
 form {
-  margin-top: 20px;
+  margin-top: 40px;
+  
+
 }
 
 form input, form select {
@@ -39,4 +59,39 @@ form input, form select {
   width: 90%;
   margin: 10px auto;
   padding: 8px;
+  background-color: transparent;
+  
+}
+.form-popup {
+  position: fixed;
+  background-color: #f9f9f9;
+  border: 1px solid #333;
+  padding: 10px;
+  top: 60%;
+  left: 40%;
+  transform: translate(-30%, -30%);
+  z-index: 9999;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #aaa;
+}
+
+input[type="text"], input[type="email"] {
+  width: 90%;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form-popup label {
+  display: block;
+  margin-top: 5px;
+}
+
+.form-popup input,
+.form-popup select {
+  width: 90%;
+  padding: 7px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
