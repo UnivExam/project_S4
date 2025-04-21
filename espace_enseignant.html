@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="espace_enseignant.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ajouter une Question</h1>
+        
+        <form id="questionForm">
+          <label>Type de question :</label>
+          <select id="questionType" required>
+            <option value="">--Choisir--</option>
+            <option value="directe">Question Directe</option>
+            <option value="qcm">QCM</option>
+          </select>
+    
+          <label>Énoncé :</label>
+          <textarea id="enonce" required></textarea>
+    
+          <label>Média :</label>
+          <input type="text" id="mediaImage" placeholder="URL image (optionnel)">
+          <input type="text" id="mediaAudio" placeholder="URL audio (optionnel)">
+          <input type="text" id="mediaVideo" placeholder="URL vidéo (optionnel)">
+    
+          <div id="directeFields" class="hidden">
+            <label>Réponse attendue :</label>
+            <input type="text" id="reponseDirecte">
+    
+            <label>Tolérance (en %) :</label>
+            <input type="number" id="tolerance" min="0" max="100">
+          </div>
+    
+          <div id="qcmFields" class="hidden">
+            <label>Options QCM :</label>
+            <div id="qcmOptions"></div>
+            <button type="button" onclick="addOption()">Ajouter option</button>
+          </div>
+    
+          <label>Note :</label>
+          <input type="number" id="note" value="1" required>
+    
+          <label>Durée (en secondes) :</label>
+          <input type="number" id="duree" value="30" required>
+    
+          <button type="submit">Ajouter</button>
+        </form>
+    
+        <pre id="jsonOutput"></pre>
+      </div>
+    
+       <script src="script.js"></script>
+      </body>
+  </html> 
+</body>
+</html>
