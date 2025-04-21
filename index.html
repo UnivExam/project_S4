@@ -20,6 +20,20 @@
                 <label><input type="radio" name="role" value="enseignant">👨‍🏫 Enseignant
                 </label>
             </div>
+            <button onclick="showLoginForm()">Connexion</button>
+
+             <div id="loginForm" style="display:none;" class="form-popup">
+               <h3>Connexion</h3>
+               
+             
+               <label for="email">Email :</label>
+               <input type="email" id="email" name="email" required><br><br>
+               <label for="name">mot de pass</label>
+               <input type="password" id="pass" name="pass" required><br><br>
+             
+               <button onclick="submitLogin()">Envoyer</button>
+               <button onclick="hideLoginForm()">Annuler</button>
+             </div>
           <button id="inscriptionBtn">Inscription</button>
           <form id="formulaire" style="display: none;">
           <table>
@@ -33,6 +47,7 @@
                 </select>
             </td></tr>
             <tr><td>Etablissement</td><td><input type="text" name="etablissement" id="etablissement"required></td></tr>
+            <tr><td>filiere</td><td><input type="text"name="filiere" id="filiere" required></td></tr>
             <tr><td>Date</td><td><input type="date" name="date" id="date"required></td></tr>
             <tr><td colspan="2" id="center"><input type="submit" value="Envoyer"/> <input type="reset" value="Annuler"/></td></td>
             </table>
