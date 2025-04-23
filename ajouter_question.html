@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter une Question</title>
+    <link rel="stylesheet" href="espace_enseignant.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ajouter une Question</h1>
+
+        <form id="questionForm">
+            <label for="questionType">Type de question :</label>
+            <select id="questionType" required>
+                <option value="">--Choisir--</option>
+                <option value="directe">Question Directe</option>
+                <option value="qcm">QCM</option>
+            </select>
+
+            <label for="enonce">Énoncé :</label>
+            <textarea id="enonce" required></textarea>
+
+            <label>Média :</label>
+            <input type="text" id="mediaImage" placeholder="URL image (optionnel)">
+            <input type="text" id="mediaAudio" placeholder="URL audio (optionnel)">
+            <input type="text" id="mediaVideo" placeholder="URL vidéo (optionnel)">
+
+            <!-- Champs pour la question directe -->
+            <div id="directeFields" class="hidden">
+                <label for="reponseDirecte">Réponse attendue :</label>
+                <input type="text" id="reponseDirecte">
+
+                <label for="tolerance">Tolérance (en %) :</label>
+                <input type="number" id="tolerance" min="0" max="100">
+            </div>
+
+            <!-- Champs pour le QCM -->
+            <div id="qcmFields" class="hidden">
+                <label>Options QCM :</label>
+                <div id="qcmOptions"></div>
+                <button type="button" id="addOptionBtn">Ajouter option</button>
+            </div>
+
+            <label for="note">Note :</label>
+            <input type="number" id="note" value="1" required>
+
+            <label for="duree">Durée (en secondes) :</label>
+            <input type="number" id="duree" value="30" required>
+
+            <button type="submit">Ajouter</button>
+        </form>
+
+        <pre id="jsonOutput"></pre>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
