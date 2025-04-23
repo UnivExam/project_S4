@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="francais">
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width">
+            <link rel="stylesheet" href="style.css">
+            <title>acceuil_mon site</title>
+
+        </head>
+        <body>
+         <header>
+            <center><h1>bienvenue sur le portail examens!</h1></center>
+         </header>
+         <section>
+            <div class="container">
+            <div class="role-selection">
+                <label><input type="radio" name="role" value="etudiant">🎓 Étudiant
+                </label>
+                <label><input type="radio" name="role" value="enseignant">👨‍🏫 Enseignant
+                </label>
+            </div>
+            <button onclick="showLoginForm()">Connexion</button>
+
+             <div id="loginForm" style="display:none;" class="form-popup">
+               <h3>Connexion</h3>
+               
+             
+               <label for="email">Email :</label>
+               <input type="email" id="email" name="email" required><br><br>
+               <label for="name">mot de pass</label>
+               <input type="password" id="pass" name="pass" required><br><br>
+             
+               <button onclick="submitLogin()">Envoyer</button>
+               <button onclick="hideLoginForm()">Annuler</button>
+             </div>
+          <button id="inscriptionBtn">Inscription</button>
+          <form id="formulaire" style="display: none;">
+          <table>
+            <tr><td>Nom</td><td><input type="text" name="nom" id="nom" required></td></tr>
+            <tr><td>Prenom</td><td><input type="text" name="prenom" id="prenom"required></td></tr>
+            <tr><td>Email</td><td><input type="email"required/></td></tr>
+            <tr><td>Sexe</td><td>
+                <select name="Sexe" id="sexe"required>
+                    <option value="homme">Homme</option>
+                    <option value="femme">Femme</option>
+                </select>
+            </td></tr>
+            <tr><td>Etablissement</td><td><input type="text" name="etablissement" id="etablissement"required></td></tr>
+            <tr><td>filiere</td><td><input type="text"name="filiere" id="filiere" required></td></tr>
+            <tr><td>Date</td><td><input type="date" name="date" id="date"required></td></tr>
+            <tr><td colspan="2" id="center"><input type="submit" value="Envoyer"/> <input type="reset" value="Annuler"/></td></td>
+            </table>
+           </form>
+          </div>
+           </section>
+           <script src="script.js"></script>
+          </body>
+      </html>

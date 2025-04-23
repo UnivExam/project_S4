@@ -1,0 +1,84 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f3f3f3;
+  padding: 20px;
+  margin: 0;
+  color: #333;
+  background-image: url(Free\ Vector\ _\ White\ abstract\ background.jpeg);
+  
+}
+.container {
+  background : transparent;
+  max-width: 600px;
+  margin: auto;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  backdrop-filter: blur(2px);
+  
+}
+
+.container:hover {
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+}
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #555;
+}
+input, textarea, select, button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+input:focus, textarea:focus, select:focus {
+  border-color: #1e90ff;
+  box-shadow: 0 0 8px rgba(30, 144, 255, 0.5);
+  outline: none;
+}
+button {
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  margin-top: 15px;
+  cursor: pointer;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+button:hover {
+  background-color: #006fd2;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+  label {
+    font-size: 0.9rem;
+  }
+
+  input, textarea, select, button {
+    font-size: 0.95rem;
+  }
+
+  button {
+    padding: 10px;
+  }
+  .hidden {
+    display: none;
+  }
