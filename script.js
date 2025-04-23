@@ -87,3 +87,9 @@ document.getElementById("inscriptionBtn").onclick = function () {
     }
   }
   
+
+
+
+
+
+
