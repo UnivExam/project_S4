@@ -5,11 +5,18 @@ document.getElementById("inscriptionBtn").onclick = function () {
   document.getElementById("formulaire").onsubmit = function (e) {
     e.preventDefault();
     const role = document.querySelector('input[name="role"]:checked');
+    const password = document.getElementById("password").value;
   
     if (!role) {
       alert("Veuillez sélectionner Étudiant ou Enseignant.");
       return;
     }
+
+    if (!password) {
+    alert("Veuillez entrer un mot de passe.");
+    return;
+  }
+
   
     if (role.value === "etudiant") {
       window.location.href = "espace_etudiant.html";
