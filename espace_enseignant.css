@@ -1,87 +1,59 @@
-
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f3f3f3;
-  padding: 20px;
-  margin: 0;
-  color: #333;
-  background-image: url(Free\ Vector\ _\ White\ abstract\ background.jpeg);
-  
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 20px;
+    background-image: url(Free\ Vector\ _\ White\ abstract\ background.jpeg);
 }
-.container {
-  background : transparent;
-  max-width: 600px;
-  margin: auto;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
-  backdrop-filter: blur(2px);
-  
+header {
+   
+    color:black;
+    padding: 20px 0;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+table {
+    background-color: white;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background : transparent;
+    backdrop-filter: blur(2px);
 }
 
-.container:hover {
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
+
+table td {
+    padding: 12px;
 }
-label {
-  display: block;
-  margin-top: 10px;
-  font-weight: bold;
-  color: #555;
-}
+
 input, textarea, select, button {
-  width: 100%;
-  padding: 12px;
-  margin-top: 8px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-  box-sizing: border-box;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    padding: 2px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
-input:focus, textarea:focus, select:focus {
-  border-color: #1e90ff;
-  box-shadow: 0 0 8px rgba(30, 144, 255, 0.5);
-  outline: none;
+    input:focus, textarea:focus, select:focus {
+    border-color: #1e90ff;
+    box-shadow: 0 0 8px rgba(30, 144, 255, 0.5);
+    outline: none;
 }
 button {
-  background-color: #1e90ff;
-  color: white;
-  border: none;
-  margin-top: 15px;
-  cursor: pointer;
-  padding: 12px;
-  font-size: 1rem;
-  border-radius: 8px;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+    padding: 10px 15px;
+    background-color: #006fd2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
+
 button:hover {
-  background-color: #006fd2;
-  transform: translateY(-2px);
-}
-
-button:active {
-  transform: translateY(0);
-}
-.hidden {
-  display: none;
-}
-
-
-@media (max-width: 768px) {
-  .container {
-    padding: 20px;
-  }
-
-  label {
-    font-size: 0.9rem;
-  }
-
-  input, textarea, select, button {
-    font-size: 0.95rem;
-  }
-
-  button {
-    padding: 10px;
-  }
+    background-color: #006fd2;
 }
