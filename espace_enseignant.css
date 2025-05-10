@@ -3,8 +3,8 @@ body {
     background-color: #f2f2f2;
     margin: 0;
     padding: 20px;
-    background-image: url(Free\ Vector\ _\ White\ abstract\ background.jpeg);
 }
+
 header {
    
     color:black;
@@ -13,36 +13,29 @@ header {
     border-radius: 10px;
     margin-bottom: 30px;
 }
+
 table {
     background-color: white;
     margin: 0 auto;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    background : transparent;
-    backdrop-filter: blur(2px);
 }
-
 
 table td {
-    padding: 12px;
+    padding: 10px;
 }
 
-input, textarea, select, button {
+input[type="text"],
+textarea {
     width: 100%;
-    padding: 2px;
-    margin-top: 8px;
+    padding: 8px;
     border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
+    border-radius: 6px;
     box-sizing: border-box;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    resize: vertical;
 }
-    input:focus, textarea:focus, select:focus {
-    border-color: #1e90ff;
-    box-shadow: 0 0 8px rgba(30, 144, 255, 0.5);
-    outline: none;
-}
+
 button {
     padding: 10px 15px;
     background-color: #006fd2;
