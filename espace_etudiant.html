@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Espace Étudiant</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .question { display: none; }
+  </style>
+</head>
+<body>
+  <h1>Bienvenue à l'examen</h1>
+  <p>Veuillez activer la géolocalisation pour continuer.</p>
+  <button onclick="startExam()">Activer et commencer</button>
+  <div id="exam"></div>
+  <script>
+    const questions = [
+      { text: 'Quel est le capital du Maroc ?', type: 'direct', duration: 10 },
+      { text: 'Choisissez les couleurs du drapeau marocain.', type: 'qcm', options: ['Rouge', 'Vert', 'Bleu'], duration: 15 }
+    ];
+    let currentQuestion = 0;
+
+    function startExam() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(pos => {
+          console.log('Position enregistrée :', pos.coords);
+          showQuestion();
+        }, err => alert('Géolocalisation requise.'));
+      } else {
+        alert("La géolocalisation n'est pas prise en charge par votre navigateur.");
+      }
+    }
+
+    function showQuestion() {
+      const examDiv = document.getElementById('exam');
+      examDiv.innerHTML = '';
+      if (currentQuestion < questions.length) {
+        const q = questions[currentQuestion];
+        const div = document.createElement('div');
+        div.className = 'question';
+        div.innerHTML = `<p>${q.text}</p>`;
+        if (q.type === 'qcm') {
+          q.options.forEach(opt => {
+            div.innerHTML += `<input type='checkbox'> ${opt}<br>`;
+          });
+        } else {
+          div.innerHTML += `<input type='text'><br>`;
+        }
+        examDiv.appendChild(div);
+        div.style.display = 'block';
+        setTimeout(() => {
+          currentQuestion++;
+          showQuestion();
+        }, q.duration * 1000);
+      } else {
+        examDiv.innerHTML = '<h2>Examen terminé</h2><p>Votre score : 100/100</p>';
+      }
+    }
+  </script>
+</body>
+</html>

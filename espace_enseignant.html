@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="espace_enseignant.css">
+    <title>Document</title>
+</head>
+<body >
+    <header>
+        <center><h1>Creation d'examen!</h1></center>
+    </header>
+    <table>
+        <tr><td>Titre</td><td><input type="text" name="titre" id="titre" required></td></tr>
+        <tr><td>Description</td><td><textarea name="description" id="description"required></textarea></td></tr>
+        <tr><td>Public ciblé</td><td><input type="text" id="public" placeholder="public ciblé(ex:2e annee MIP,S4,groupe A)" required></td></tr>
+        <tr><td><button onclick="genererLien()">Générer le lien unique </button><p id="uniqueLink"></p></td></tr>
+        <tr><td><button onclick="addQuestion()">ajouter_question</button></td></tr>
+    </table>
+    <script src="espace_enseignant.js"></script>
+</body>
+</html>
