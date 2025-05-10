@@ -1,59 +1,65 @@
 <!DOCTYPE html>
-<html lang="francais">
-    <html>
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width">
-            <link rel="stylesheet" href="style.css">
-            <title>acceuil_mon site</title>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portail Examens - Accueil</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-        </head>
-        <body>
-         <header>
-            <center><h1>bienvenue sur le portail examens!</h1></center>
-         </header>
-         <section>
-            <div class="container">
-            <div class="role-selection">
-                <label><input type="radio" name="role" value="etudiant">🎓 Étudiant
-                </label>
-                <label><input type="radio" name="role" value="enseignant">👨‍🏫 Enseignant
-                </label>
-            </div>
-            <button onclick="showLoginForm()">Connexion</button>
+  <header>
+    <h1>Bienvenue sur le portail examens !</h1>
+  </header>
 
-             <div id="loginForm" style="display:none;" class="form-popup">
-               <h3>Connexion</h3>
-               
-             
-               <label for="email">Email :</label>
-               <input type="email" id="email" name="email" required><br><br>
-               <label for="name">mot de pass</label>
-               <input type="password" id="pass" name="pass" required><br><br>
-             
-               <button onclick="submitLogin()">Envoyer</button>
-               <button onclick="hideLoginForm()">Annuler</button>
-             </div>
-          <button id="inscriptionBtn">Inscription</button>
-          <form id="formulaire" style="display: none;">
-          <table>
-            <tr><td>Nom</td><td><input type="text" name="nom" id="nom" required></td></tr>
-            <tr><td>Prenom</td><td><input type="text" name="prenom" id="prenom"required></td></tr>
-            <tr><td>Email</td><td><input type="email"required/></td></tr>
-            <tr><td>Sexe</td><td>
-                <select name="Sexe" id="sexe"required>
-                    <option value="homme">Homme</option>
-                    <option value="femme">Femme</option>
-                </select>
-            </td></tr>
-            <tr><td>Etablissement</td><td><input type="text" name="etablissement" id="etablissement"required></td></tr>
-            <tr><td>filiere</td><td><input type="text"name="filiere" id="filiere" required></td></tr>
-            <tr><td>Date</td><td><input type="date" name="date" id="date"required></td></tr>
-            <tr><td colspan="2" id="center"><input type="submit" value="Envoyer"/> <input type="reset" value="Annuler"/></td></td>
-            </table>
-           </form>
-          </div>
-           </section>
-           <script src="script.js"></script>
-          </body>
-      </html>
+  <section class="description">
+    <h2>Votre plateforme d’examens en ligne, simple, rapide et efficace</h2>
+    <p>
+      Préparez, passez et gérez vos examens en toute sérénité. Que vous soyez étudiant, enseignant ou établissement,
+      notre solution vous offre une interface intuitive pour créer des évaluations,
+      suivre les résultats et renforcer les apprentissages.
+    </p>
+  </section>
+
+  <section>
+    <div class="container">
+      <h2>Choisissez votre rôle</h2>
+      <div class="role-selection">
+        <label><input type="radio" name="role" value="etudiant">🎓 Étudiant</label>
+        <label><input type="radio" name="role" value="enseignant">👨‍🏫 Enseignant</label>
+      </div>
+
+      <div class="buttons">
+        <button id="connexionBtn">Connexion</button>
+        <button id="inscriptionBtn">Inscription</button>
+      </div>
+    </div>
+
+    <!-- Formulaire de connexion -->
+    <form id="loginForm" style="display:none; text-align:center; margin-top:20px;" onsubmit="submitLogin(event)">
+      <h2>Connexion</h2>
+      <input type="email" id="login_email" placeholder="Email"><br><br>
+      <input type="password" id="pass" placeholder="Mot de passe"><br><br>
+      <button type="submit">Se connecter</button>
+    </form>
+
+    <!-- Formulaire d'inscription -->
+    <form id="signupForm" style="display:none; text-align:center; margin-top:20px;" onsubmit="submitSignup(event)">
+      <h2>Inscription</h2>
+      <input type="text" id="nom" placeholder="Nom"><br><br>
+      <input type="text" id="prenom" placeholder="Prénom"><br><br>
+      <input type="email" id="signup_email" placeholder="Email"><br><br>
+      <input type="date" id="date"><br><br>
+      <select id="sexe">
+        <option value="">Sélectionnez le sexe</option>
+        <option value="homme">Homme</option>
+        <option value="femme">Femme</option>
+      </select><br><br>
+      <input type="text" id="etablissement" placeholder="Etablissement"><br><br>
+      <input type="text" id="filiere" placeholder="Filière"><br><br>
+      <input type="password" id="password" placeholder="Mot de passe"><br><br>
+      <button type="submit">S'inscrire</button>
+    </form>
+    <script src="script.js"></script>
+   </body>
+   </html>
